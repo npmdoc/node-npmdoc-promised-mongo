@@ -1,0 +1,4281 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/gordonmleigh/promised-mongo#readme"
+
+    >promised-mongo (v1.2.0)</a>
+</h1>
+<h4>Easy to use module that implements the mongo api and supports promises</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.promised-mongo">module promised-mongo</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.promised-mongo">
+            function <span class="apidocSignatureSpan"></span>promised-mongo
+            <span class="apidocSignatureSpan">(connectionString, options, collections)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.DBRef">
+            function <span class="apidocSignatureSpan">promised-mongo.</span>DBRef
+            <span class="apidocSignatureSpan">(namespace, oid, db)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.MaxKey">
+            function <span class="apidocSignatureSpan">promised-mongo.</span>MaxKey
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.MinKey">
+            function <span class="apidocSignatureSpan">promised-mongo.</span>MinKey
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.NumberLong">
+            function <span class="apidocSignatureSpan">promised-mongo.</span>NumberLong
+            <span class="apidocSignatureSpan">(low, high)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.ObjectId">
+            function <span class="apidocSignatureSpan">promised-mongo.</span>ObjectId
+            <span class="apidocSignatureSpan">(id)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.Timestamp">
+            function <span class="apidocSignatureSpan">promised-mongo.</span>Timestamp
+            <span class="apidocSignatureSpan">(low, high)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.compatible">
+            function <span class="apidocSignatureSpan">promised-mongo.</span>compatible
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.index">
+            function <span class="apidocSignatureSpan">promised-mongo.</span>index
+            <span class="apidocSignatureSpan">(connectionString, options, collections)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">promised-mongo.</span>DBRef.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">promised-mongo.</span>NumberLong.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">promised-mongo.</span>ObjectId.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">promised-mongo.</span>Timestamp.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.promised-mongo.DBRef">module promised-mongo.DBRef</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.DBRef.DBRef">
+            function <span class="apidocSignatureSpan">promised-mongo.</span>DBRef
+            <span class="apidocSignatureSpan">(namespace, oid, db)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.promised-mongo.DBRef.prototype">module promised-mongo.DBRef.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.DBRef.prototype.toJSON">
+            function <span class="apidocSignatureSpan">promised-mongo.DBRef.prototype.</span>toJSON
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.promised-mongo.MaxKey">module promised-mongo.MaxKey</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.MaxKey.MaxKey">
+            function <span class="apidocSignatureSpan">promised-mongo.</span>MaxKey
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.promised-mongo.MinKey">module promised-mongo.MinKey</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.MinKey.MinKey">
+            function <span class="apidocSignatureSpan">promised-mongo.</span>MinKey
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.promised-mongo.NumberLong">module promised-mongo.NumberLong</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.NumberLong.NumberLong">
+            function <span class="apidocSignatureSpan">promised-mongo.</span>NumberLong
+            <span class="apidocSignatureSpan">(low, high)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.NumberLong.Long">
+            function <span class="apidocSignatureSpan">promised-mongo.NumberLong.</span>Long
+            <span class="apidocSignatureSpan">(low, high)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.NumberLong.fromBits">
+            function <span class="apidocSignatureSpan">promised-mongo.NumberLong.</span>fromBits
+            <span class="apidocSignatureSpan">(lowBits, highBits)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.NumberLong.fromInt">
+            function <span class="apidocSignatureSpan">promised-mongo.NumberLong.</span>fromInt
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.NumberLong.fromNumber">
+            function <span class="apidocSignatureSpan">promised-mongo.NumberLong.</span>fromNumber
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.NumberLong.fromString">
+            function <span class="apidocSignatureSpan">promised-mongo.NumberLong.</span>fromString
+            <span class="apidocSignatureSpan">(str, opt_radix)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">promised-mongo.NumberLong.</span>TWO_PWR_16_DBL_</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">promised-mongo.NumberLong.</span>TWO_PWR_24_DBL_</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">promised-mongo.NumberLong.</span>TWO_PWR_31_DBL_</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">promised-mongo.NumberLong.</span>TWO_PWR_32_DBL_</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">promised-mongo.NumberLong.</span>TWO_PWR_48_DBL_</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">promised-mongo.NumberLong.</span>TWO_PWR_63_DBL_</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">promised-mongo.NumberLong.</span>TWO_PWR_64_DBL_</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">promised-mongo.NumberLong.</span>INT_CACHE_</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">promised-mongo.NumberLong.</span>MAX_VALUE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">promised-mongo.NumberLong.</span>MIN_VALUE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">promised-mongo.NumberLong.</span>NEG_ONE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">promised-mongo.NumberLong.</span>ONE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">promised-mongo.NumberLong.</span>TWO_PWR_24_</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">promised-mongo.NumberLong.</span>ZERO</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.promised-mongo.NumberLong.prototype">module promised-mongo.NumberLong.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.NumberLong.prototype.add">
+            function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>add
+            <span class="apidocSignatureSpan">(other)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.NumberLong.prototype.and">
+            function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>and
+            <span class="apidocSignatureSpan">(other)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.NumberLong.prototype.compare">
+            function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>compare
+            <span class="apidocSignatureSpan">(other)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.NumberLong.prototype.div">
+            function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>div
+            <span class="apidocSignatureSpan">(other)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.NumberLong.prototype.equals">
+            function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>equals
+            <span class="apidocSignatureSpan">(other)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.NumberLong.prototype.getHighBits">
+            function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>getHighBits
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.NumberLong.prototype.getLowBits">
+            function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>getLowBits
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.NumberLong.prototype.getLowBitsUnsigned">
+            function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>getLowBitsUnsigned
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.NumberLong.prototype.getNumBitsAbs">
+            function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>getNumBitsAbs
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.NumberLong.prototype.greaterThan">
+            function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>greaterThan
+            <span class="apidocSignatureSpan">(other)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.NumberLong.prototype.greaterThanOrEqual">
+            function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>greaterThanOrEqual
+            <span class="apidocSignatureSpan">(other)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.NumberLong.prototype.isNegative">
+            function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>isNegative
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.NumberLong.prototype.isOdd">
+            function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>isOdd
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.NumberLong.prototype.isZero">
+            function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>isZero
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.NumberLong.prototype.lessThan">
+            function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>lessThan
+            <span class="apidocSignatureSpan">(other)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.NumberLong.prototype.lessThanOrEqual">
+            function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>lessThanOrEqual
+            <span class="apidocSignatureSpan">(other)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.NumberLong.prototype.modulo">
+            function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>modulo
+            <span class="apidocSignatureSpan">(other)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.NumberLong.prototype.multiply">
+            function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>multiply
+            <span class="apidocSignatureSpan">(other)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.NumberLong.prototype.negate">
+            function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>negate
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.NumberLong.prototype.not">
+            function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>not
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.NumberLong.prototype.notEquals">
+            function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>notEquals
+            <span class="apidocSignatureSpan">(other)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.NumberLong.prototype.or">
+            function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>or
+            <span class="apidocSignatureSpan">(other)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.NumberLong.prototype.shiftLeft">
+            function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>shiftLeft
+            <span class="apidocSignatureSpan">(numBits)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.NumberLong.prototype.shiftRight">
+            function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>shiftRight
+            <span class="apidocSignatureSpan">(numBits)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.NumberLong.prototype.shiftRightUnsigned">
+            function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>shiftRightUnsigned
+            <span class="apidocSignatureSpan">(numBits)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.NumberLong.prototype.subtract">
+            function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>subtract
+            <span class="apidocSignatureSpan">(other)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.NumberLong.prototype.toInt">
+            function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>toInt
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.NumberLong.prototype.toJSON">
+            function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>toJSON
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.NumberLong.prototype.toNumber">
+            function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>toNumber
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.NumberLong.prototype.toString">
+            function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>toString
+            <span class="apidocSignatureSpan">(opt_radix)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.NumberLong.prototype.xor">
+            function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>xor
+            <span class="apidocSignatureSpan">(other)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.promised-mongo.ObjectId">module promised-mongo.ObjectId</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.ObjectId.ObjectId">
+            function <span class="apidocSignatureSpan">promised-mongo.</span>ObjectId
+            <span class="apidocSignatureSpan">(id)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.ObjectId.ObjectID">
+            function <span class="apidocSignatureSpan">promised-mongo.ObjectId.</span>ObjectID
+            <span class="apidocSignatureSpan">(id)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.ObjectId.createFromHexString">
+            function <span class="apidocSignatureSpan">promised-mongo.ObjectId.</span>createFromHexString
+            <span class="apidocSignatureSpan">(hexString)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.ObjectId.createFromTime">
+            function <span class="apidocSignatureSpan">promised-mongo.ObjectId.</span>createFromTime
+            <span class="apidocSignatureSpan">(time)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.ObjectId.createPk">
+            function <span class="apidocSignatureSpan">promised-mongo.ObjectId.</span>createPk
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.ObjectId.isValid">
+            function <span class="apidocSignatureSpan">promised-mongo.ObjectId.</span>isValid
+            <span class="apidocSignatureSpan">(id)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">promised-mongo.ObjectId.</span>index</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.promised-mongo.ObjectId.prototype">module promised-mongo.ObjectId.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.ObjectId.prototype.equals">
+            function <span class="apidocSignatureSpan">promised-mongo.ObjectId.prototype.</span>equals
+            <span class="apidocSignatureSpan">(otherID)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.ObjectId.prototype.generate">
+            function <span class="apidocSignatureSpan">promised-mongo.ObjectId.prototype.</span>generate
+            <span class="apidocSignatureSpan">(time)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.ObjectId.prototype.getInc">
+            function <span class="apidocSignatureSpan">promised-mongo.ObjectId.prototype.</span>getInc
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.ObjectId.prototype.getTimestamp">
+            function <span class="apidocSignatureSpan">promised-mongo.ObjectId.prototype.</span>getTimestamp
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.ObjectId.prototype.get_inc">
+            function <span class="apidocSignatureSpan">promised-mongo.ObjectId.prototype.</span>get_inc
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.ObjectId.prototype.inspect">
+            function <span class="apidocSignatureSpan">promised-mongo.ObjectId.prototype.</span>inspect
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.ObjectId.prototype.toHexString">
+            function <span class="apidocSignatureSpan">promised-mongo.ObjectId.prototype.</span>toHexString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.ObjectId.prototype.toJSON">
+            function <span class="apidocSignatureSpan">promised-mongo.ObjectId.prototype.</span>toJSON
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.ObjectId.prototype.toString">
+            function <span class="apidocSignatureSpan">promised-mongo.ObjectId.prototype.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.promised-mongo.Timestamp">module promised-mongo.Timestamp</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.Timestamp.Timestamp">
+            function <span class="apidocSignatureSpan">promised-mongo.</span>Timestamp
+            <span class="apidocSignatureSpan">(low, high)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.Timestamp.fromBits">
+            function <span class="apidocSignatureSpan">promised-mongo.Timestamp.</span>fromBits
+            <span class="apidocSignatureSpan">(lowBits, highBits)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.Timestamp.fromInt">
+            function <span class="apidocSignatureSpan">promised-mongo.Timestamp.</span>fromInt
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.Timestamp.fromNumber">
+            function <span class="apidocSignatureSpan">promised-mongo.Timestamp.</span>fromNumber
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.Timestamp.fromString">
+            function <span class="apidocSignatureSpan">promised-mongo.Timestamp.</span>fromString
+            <span class="apidocSignatureSpan">(str, opt_radix)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">promised-mongo.Timestamp.</span>TWO_PWR_16_DBL_</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">promised-mongo.Timestamp.</span>TWO_PWR_24_DBL_</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">promised-mongo.Timestamp.</span>TWO_PWR_31_DBL_</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">promised-mongo.Timestamp.</span>TWO_PWR_32_DBL_</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">promised-mongo.Timestamp.</span>TWO_PWR_48_DBL_</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">promised-mongo.Timestamp.</span>TWO_PWR_63_DBL_</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">promised-mongo.Timestamp.</span>TWO_PWR_64_DBL_</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">promised-mongo.Timestamp.</span>INT_CACHE_</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">promised-mongo.Timestamp.</span>MAX_VALUE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">promised-mongo.Timestamp.</span>MIN_VALUE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">promised-mongo.Timestamp.</span>NEG_ONE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">promised-mongo.Timestamp.</span>ONE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">promised-mongo.Timestamp.</span>TWO_PWR_24_</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">promised-mongo.Timestamp.</span>ZERO</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.promised-mongo.Timestamp.prototype">module promised-mongo.Timestamp.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.Timestamp.prototype.add">
+            function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>add
+            <span class="apidocSignatureSpan">(other)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.Timestamp.prototype.and">
+            function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>and
+            <span class="apidocSignatureSpan">(other)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.Timestamp.prototype.compare">
+            function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>compare
+            <span class="apidocSignatureSpan">(other)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.Timestamp.prototype.div">
+            function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>div
+            <span class="apidocSignatureSpan">(other)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.Timestamp.prototype.equals">
+            function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>equals
+            <span class="apidocSignatureSpan">(other)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.Timestamp.prototype.getHighBits">
+            function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>getHighBits
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.Timestamp.prototype.getLowBits">
+            function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>getLowBits
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.Timestamp.prototype.getLowBitsUnsigned">
+            function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>getLowBitsUnsigned
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.Timestamp.prototype.getNumBitsAbs">
+            function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>getNumBitsAbs
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.Timestamp.prototype.greaterThan">
+            function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>greaterThan
+            <span class="apidocSignatureSpan">(other)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.Timestamp.prototype.greaterThanOrEqual">
+            function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>greaterThanOrEqual
+            <span class="apidocSignatureSpan">(other)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.Timestamp.prototype.isNegative">
+            function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>isNegative
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.Timestamp.prototype.isOdd">
+            function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>isOdd
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.Timestamp.prototype.isZero">
+            function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>isZero
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.Timestamp.prototype.lessThan">
+            function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>lessThan
+            <span class="apidocSignatureSpan">(other)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.Timestamp.prototype.lessThanOrEqual">
+            function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>lessThanOrEqual
+            <span class="apidocSignatureSpan">(other)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.Timestamp.prototype.modulo">
+            function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>modulo
+            <span class="apidocSignatureSpan">(other)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.Timestamp.prototype.multiply">
+            function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>multiply
+            <span class="apidocSignatureSpan">(other)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.Timestamp.prototype.negate">
+            function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>negate
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.Timestamp.prototype.not">
+            function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>not
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.Timestamp.prototype.notEquals">
+            function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>notEquals
+            <span class="apidocSignatureSpan">(other)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.Timestamp.prototype.or">
+            function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>or
+            <span class="apidocSignatureSpan">(other)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.Timestamp.prototype.shiftLeft">
+            function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>shiftLeft
+            <span class="apidocSignatureSpan">(numBits)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.Timestamp.prototype.shiftRight">
+            function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>shiftRight
+            <span class="apidocSignatureSpan">(numBits)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.Timestamp.prototype.shiftRightUnsigned">
+            function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>shiftRightUnsigned
+            <span class="apidocSignatureSpan">(numBits)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.Timestamp.prototype.subtract">
+            function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>subtract
+            <span class="apidocSignatureSpan">(other)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.Timestamp.prototype.toInt">
+            function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>toInt
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.Timestamp.prototype.toJSON">
+            function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>toJSON
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.Timestamp.prototype.toNumber">
+            function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>toNumber
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.Timestamp.prototype.toString">
+            function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>toString
+            <span class="apidocSignatureSpan">(opt_radix)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.Timestamp.prototype.xor">
+            function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>xor
+            <span class="apidocSignatureSpan">(other)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.promised-mongo.index">module promised-mongo.index</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.index.index">
+            function <span class="apidocSignatureSpan">promised-mongo.</span>index
+            <span class="apidocSignatureSpan">(connectionString, options, collections)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.index.DBRef">
+            function <span class="apidocSignatureSpan">promised-mongo.index.</span>DBRef
+            <span class="apidocSignatureSpan">(namespace, oid, db)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.index.MaxKey">
+            function <span class="apidocSignatureSpan">promised-mongo.index.</span>MaxKey
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.index.MinKey">
+            function <span class="apidocSignatureSpan">promised-mongo.index.</span>MinKey
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.index.NumberLong">
+            function <span class="apidocSignatureSpan">promised-mongo.index.</span>NumberLong
+            <span class="apidocSignatureSpan">(low, high)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.index.ObjectId">
+            function <span class="apidocSignatureSpan">promised-mongo.index.</span>ObjectId
+            <span class="apidocSignatureSpan">(id)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.index.Timestamp">
+            function <span class="apidocSignatureSpan">promised-mongo.index.</span>Timestamp
+            <span class="apidocSignatureSpan">(low, high)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promised-mongo.index.compatible">
+            function <span class="apidocSignatureSpan">promised-mongo.index.</span>compatible
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.promised-mongo" id="apidoc.module.promised-mongo">module promised-mongo</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.promised-mongo" id="apidoc.element.promised-mongo.promised-mongo">
+        function <span class="apidocSignatureSpan"></span>promised-mongo
+        <span class="apidocSignatureSpan">(connectionString, options, collections)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createDatabase(connectionString, options, collections) {
+  var db = new Database(connectionString, options, collections);
+
+  db.ObjectId = mongodb.BSON.ObjectId;
+  db.DBRef = mongodb.BSON.DBRef;
+  db.Timestamp = mongodb.BSON.Timestamp;
+  db.MinKey = mongodb.BSON.MinKey;
+  db.MaxKey = mongodb.BSON.MaxKey;
+  db.NumberLong = mongodb.BSON.Long;
+
+  var ret;
+
+  if (ES2015Proxy) {
+    ret = new ES2015Proxy(db, {
+      get: function (target, property) {
+        if (target[property]) {
+          return target[property];
+        } else {
+          return target[property] = target.collection(property);
+        }
+      }
+    });
+  } else {
+    ret = db;
+  }
+
+  return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.DBRef" id="apidoc.element.promised-mongo.DBRef">
+        function <span class="apidocSignatureSpan">promised-mongo.</span>DBRef
+        <span class="apidocSignatureSpan">(namespace, oid, db)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function DBRef(namespace, oid, db) {
+  if(!(this instanceof DBRef)) return new DBRef(namespace, oid, db);
+
+  this._bsontype = &#x27;DBRef&#x27;;
+  this.namespace = namespace;
+  this.oid = oid;
+  this.db = db;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.MaxKey" id="apidoc.element.promised-mongo.MaxKey">
+        function <span class="apidocSignatureSpan">promised-mongo.</span>MaxKey
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function MaxKey() {
+  if(!(this instanceof MaxKey)) return new MaxKey();
+
+  this._bsontype = &#x27;MaxKey&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.MinKey" id="apidoc.element.promised-mongo.MinKey">
+        function <span class="apidocSignatureSpan">promised-mongo.</span>MinKey
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function MinKey() {
+  if(!(this instanceof MinKey)) return new MinKey();
+
+  this._bsontype = &#x27;MinKey&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.NumberLong" id="apidoc.element.promised-mongo.NumberLong">
+        function <span class="apidocSignatureSpan">promised-mongo.</span>NumberLong
+        <span class="apidocSignatureSpan">(low, high)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Long(low, high) {
+  if(!(this instanceof Long)) return new Long(low, high);
+
+  this._bsontype = &#x27;Long&#x27;;
+<span class="apidocCodeCommentSpan">  /**
+   * @type {number}
+   * @ignore
+   */
+</span>  this.low_ = low | 0;  // force into 32 signed bits.
+
+  /**
+   * @type {number}
+   * @ignore
+   */
+  this.high_ = high | 0;  // force into 32 signed bits.
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.ObjectId" id="apidoc.element.promised-mongo.ObjectId">
+        function <span class="apidocSignatureSpan">promised-mongo.</span>ObjectId
+        <span class="apidocSignatureSpan">(id)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ObjectID(id) {
+  if(!(this instanceof ObjectID)) return new ObjectID(id);
+  // Duck-typing to support ObjectId from different npm packages
+  if((id instanceof ObjectID) || (id &#x26;&#x26; id.toHexString)) return id;
+
+  this._bsontype = &#x27;ObjectID&#x27;;
+  var __id = null;
+  var valid = ObjectID.isValid(id);
+
+  // Throw an error if it&#x27;s not a valid setup
+  if(!valid &#x26;&#x26; id != null){
+    throw new Error(&#x22;Argument passed in must be a single String of 12 bytes or a string of 24 hex characters&#x22;);
+  } else if(valid &#x26;&#x26; typeof id == &#x27;string&#x27; &#x26;&#x26; id.length == 24) {
+    return ObjectID.createFromHexString(id);
+  } else if(id == null || typeof id == &#x27;number&#x27;) {
+    // convert to 12 byte binary string
+    this.id = this.generate(id);
+  } else if(id != null &#x26;&#x26; id.length === 12) {
+    // assume 12 byte string
+    this.id = id;
+  }
+
+  if(ObjectID.cacheHexString) this.__id = this.toHexString();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// find everything, but sort by name
+db.mycollection.find().sort({name:1}).toArray().then(function(docs) {
+	// docs is now a sorted array
+});
+
+// find a document using a native ObjectId
+db.mycollection.findOne({
+	_id: pmongo.<span class="apidocCodeKeywordSpan">ObjectId</span>(&#x27;523209c4561c640000000001&#x27;)
+}).then(function(doc) {
+	// doc._id.toString() === &#x27;523209c4561c640000000001&#x27;
+});
+
+// find all named &#x27;mathias&#x27; and increment their level
+db.mycollection.update({name:&#x27;mathias&#x27;}, {$inc:{level:1}}, {multi:true})
+	.then(function(lastErrorObject) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.Timestamp" id="apidoc.element.promised-mongo.Timestamp">
+        function <span class="apidocSignatureSpan">promised-mongo.</span>Timestamp
+        <span class="apidocSignatureSpan">(low, high)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Timestamp(low, high) {
+  if(!(this instanceof Timestamp)) return new Timestamp(low, high);
+  this._bsontype = &#x27;Timestamp&#x27;;
+<span class="apidocCodeCommentSpan">  /**
+   * @type {number}
+   * @ignore
+   */
+</span>  this.low_ = low | 0;  // force into 32 signed bits.
+
+  /**
+   * @type {number}
+   * @ignore
+   */
+  this.high_ = high | 0;  // force into 32 signed bits.
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.compatible" id="apidoc.element.promised-mongo.compatible">
+        function <span class="apidocSignatureSpan">promised-mongo.</span>compatible
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">compatible = function () {
+  coreJs.Promise.prototype.done = function (resolve, reject) {
+    this.then(
+      function (result) {
+        try {
+          if (resolve) {
+            resolve(result);
+          }
+        } catch (err) {
+          process.nextTick(function () { throw err; });
+        }
+      },
+      function (err) {
+        if (reject) {
+          reject(err);
+        } else {
+          process.nextTick(function () { throw err; });
+        }
+      });
+  };
+
+  coreJs.Promise.prototype.fail = coreJs.Promise.prototype.catch;
+
+  coreJs.Promise.prototype.fin = coreJs.Promise.prototype.finally = function (callback) {
+      return this.then(callback, function (err) { callback(); throw err; });
+  };
+
+  var findAndModify = Collection.prototype.findAndModify;
+  Collection.prototype.findAndModifyEx = findAndModify;
+
+  Collection.prototype.findAndModify = function () {
+    return findAndModify.apply(this, Array.prototype.slice.call(arguments))
+      .then(function (result) {
+        return result.result;
+      });
+  };
+
+  Database.prototype.db = Database.prototype.getSiblingDb;
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+## Compatability with previous versions
+
+I no longer use [Q](https://github.com/kriskowal/q) for promises.  This means that you can&#x27;t  use
+`.done()` at the end of promise chains.  To turn on compatability with previous versions, you can
+call the `compatible()` function:
+
+```js
+var pmongo = require(&#x27;promised-mongo&#x27;).<span class="apidocCodeKeywordSpan">compatible</span>();
+```
+
+Other than dropping support for callbacks, I have tried to make sure that the new library is
+compatible with the old tests (see the legacy_tests folder).
+
+
+## How I write JavaScript
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.index" id="apidoc.element.promised-mongo.index">
+        function <span class="apidocSignatureSpan">promised-mongo.</span>index
+        <span class="apidocSignatureSpan">(connectionString, options, collections)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createDatabase(connectionString, options, collections) {
+  var db = new Database(connectionString, options, collections);
+
+  db.ObjectId = mongodb.BSON.ObjectId;
+  db.DBRef = mongodb.BSON.DBRef;
+  db.Timestamp = mongodb.BSON.Timestamp;
+  db.MinKey = mongodb.BSON.MinKey;
+  db.MaxKey = mongodb.BSON.MaxKey;
+  db.NumberLong = mongodb.BSON.Long;
+
+  var ret;
+
+  if (ES2015Proxy) {
+    ret = new ES2015Proxy(db, {
+      get: function (target, property) {
+        if (target[property]) {
+          return target[property];
+        } else {
+          return target[property] = target.collection(property);
+        }
+      }
+    });
+  } else {
+    ret = db;
+  }
+
+  return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.promised-mongo.DBRef" id="apidoc.module.promised-mongo.DBRef">module promised-mongo.DBRef</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.DBRef.DBRef" id="apidoc.element.promised-mongo.DBRef.DBRef">
+        function <span class="apidocSignatureSpan">promised-mongo.</span>DBRef
+        <span class="apidocSignatureSpan">(namespace, oid, db)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function DBRef(namespace, oid, db) {
+  if(!(this instanceof DBRef)) return new DBRef(namespace, oid, db);
+
+  this._bsontype = &#x27;DBRef&#x27;;
+  this.namespace = namespace;
+  this.oid = oid;
+  this.db = db;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.promised-mongo.DBRef.prototype" id="apidoc.module.promised-mongo.DBRef.prototype">module promised-mongo.DBRef.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.DBRef.prototype.toJSON" id="apidoc.element.promised-mongo.DBRef.prototype.toJSON">
+        function <span class="apidocSignatureSpan">promised-mongo.DBRef.prototype.</span>toJSON
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toJSON = function () {
+  return {
+    &#x27;$ref&#x27;:this.namespace,
+    &#x27;$id&#x27;:this.oid,
+    &#x27;$db&#x27;:this.db == null ? &#x27;&#x27; : this.db
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.promised-mongo.MaxKey" id="apidoc.module.promised-mongo.MaxKey">module promised-mongo.MaxKey</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.MaxKey.MaxKey" id="apidoc.element.promised-mongo.MaxKey.MaxKey">
+        function <span class="apidocSignatureSpan">promised-mongo.</span>MaxKey
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function MaxKey() {
+  if(!(this instanceof MaxKey)) return new MaxKey();
+
+  this._bsontype = &#x27;MaxKey&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.promised-mongo.MinKey" id="apidoc.module.promised-mongo.MinKey">module promised-mongo.MinKey</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.MinKey.MinKey" id="apidoc.element.promised-mongo.MinKey.MinKey">
+        function <span class="apidocSignatureSpan">promised-mongo.</span>MinKey
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function MinKey() {
+  if(!(this instanceof MinKey)) return new MinKey();
+
+  this._bsontype = &#x27;MinKey&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.promised-mongo.NumberLong" id="apidoc.module.promised-mongo.NumberLong">module promised-mongo.NumberLong</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.NumberLong.NumberLong" id="apidoc.element.promised-mongo.NumberLong.NumberLong">
+        function <span class="apidocSignatureSpan">promised-mongo.</span>NumberLong
+        <span class="apidocSignatureSpan">(low, high)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Long(low, high) {
+  if(!(this instanceof Long)) return new Long(low, high);
+
+  this._bsontype = &#x27;Long&#x27;;
+<span class="apidocCodeCommentSpan">  /**
+   * @type {number}
+   * @ignore
+   */
+</span>  this.low_ = low | 0;  // force into 32 signed bits.
+
+  /**
+   * @type {number}
+   * @ignore
+   */
+  this.high_ = high | 0;  // force into 32 signed bits.
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.NumberLong.Long" id="apidoc.element.promised-mongo.NumberLong.Long">
+        function <span class="apidocSignatureSpan">promised-mongo.NumberLong.</span>Long
+        <span class="apidocSignatureSpan">(low, high)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Long(low, high) {
+  if(!(this instanceof Long)) return new Long(low, high);
+
+  this._bsontype = &#x27;Long&#x27;;
+<span class="apidocCodeCommentSpan">  /**
+   * @type {number}
+   * @ignore
+   */
+</span>  this.low_ = low | 0;  // force into 32 signed bits.
+
+  /**
+   * @type {number}
+   * @ignore
+   */
+  this.high_ = high | 0;  // force into 32 signed bits.
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.NumberLong.fromBits" id="apidoc.element.promised-mongo.NumberLong.fromBits">
+        function <span class="apidocSignatureSpan">promised-mongo.NumberLong.</span>fromBits
+        <span class="apidocSignatureSpan">(lowBits, highBits)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fromBits = function (lowBits, highBits) {
+  return new Long(lowBits, highBits);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.NumberLong.fromInt" id="apidoc.element.promised-mongo.NumberLong.fromInt">
+        function <span class="apidocSignatureSpan">promised-mongo.NumberLong.</span>fromInt
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fromInt = function (value) {
+  if (-128 &#x3c;= value &#x26;&#x26; value &#x3c; 128) {
+    var cachedObj = Long.INT_CACHE_[value];
+    if (cachedObj) {
+      return cachedObj;
+    }
+  }
+
+  var obj = new Long(value | 0, value &#x3c; 0 ? -1 : 0);
+  if (-128 &#x3c;= value &#x26;&#x26; value &#x3c; 128) {
+    Long.INT_CACHE_[value] = obj;
+  }
+  return obj;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.NumberLong.fromNumber" id="apidoc.element.promised-mongo.NumberLong.fromNumber">
+        function <span class="apidocSignatureSpan">promised-mongo.NumberLong.</span>fromNumber
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fromNumber = function (value) {
+  if (isNaN(value) || !isFinite(value)) {
+    return Long.ZERO;
+  } else if (value &#x3c;= -Long.TWO_PWR_63_DBL_) {
+    return Long.MIN_VALUE;
+  } else if (value + 1 &#x3e;= Long.TWO_PWR_63_DBL_) {
+    return Long.MAX_VALUE;
+  } else if (value &#x3c; 0) {
+    return Long.fromNumber(-value).negate();
+  } else {
+    return new Long(
+               (value % Long.TWO_PWR_32_DBL_) | 0,
+               (value / Long.TWO_PWR_32_DBL_) | 0);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.NumberLong.fromString" id="apidoc.element.promised-mongo.NumberLong.fromString">
+        function <span class="apidocSignatureSpan">promised-mongo.NumberLong.</span>fromString
+        <span class="apidocSignatureSpan">(str, opt_radix)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fromString = function (str, opt_radix) {
+  if (str.length == 0) {
+    throw Error(&#x27;number format error: empty string&#x27;);
+  }
+
+  var radix = opt_radix || 10;
+  if (radix &#x3c; 2 || 36 &#x3c; radix) {
+    throw Error(&#x27;radix out of range: &#x27; + radix);
+  }
+
+  if (str.charAt(0) == &#x27;-&#x27;) {
+    return Long.fromString(str.substring(1), radix).negate();
+  } else if (str.indexOf(&#x27;-&#x27;) &#x3e;= 0) {
+    throw Error(&#x27;number format error: interior &#x22;-&#x22; character: &#x27; + str);
+  }
+
+  // Do several (8) digits each time through the loop, so as to
+  // minimize the calls to the very expensive emulated div.
+  var radixToPower = Long.fromNumber(Math.pow(radix, 8));
+
+  var result = Long.ZERO;
+  for (var i = 0; i &#x3c; str.length; i += 8) {
+    var size = Math.min(8, str.length - i);
+    var value = parseInt(str.substring(i, i + size), radix);
+    if (size &#x3c; 8) {
+      var power = Long.fromNumber(Math.pow(radix, size));
+      result = result.multiply(power).add(Long.fromNumber(value));
+    } else {
+      result = result.multiply(radixToPower);
+      result = result.add(Long.fromNumber(value));
+    }
+  }
+  return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.promised-mongo.NumberLong.prototype" id="apidoc.module.promised-mongo.NumberLong.prototype">module promised-mongo.NumberLong.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.NumberLong.prototype.add" id="apidoc.element.promised-mongo.NumberLong.prototype.add">
+        function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>add
+        <span class="apidocSignatureSpan">(other)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">add = function (other) {
+  // Divide each number into 4 chunks of 16 bits, and then sum the chunks.
+
+  var a48 = this.high_ &#x3e;&#x3e;&#x3e; 16;
+  var a32 = this.high_ &#x26; 0xFFFF;
+  var a16 = this.low_ &#x3e;&#x3e;&#x3e; 16;
+  var a00 = this.low_ &#x26; 0xFFFF;
+
+  var b48 = other.high_ &#x3e;&#x3e;&#x3e; 16;
+  var b32 = other.high_ &#x26; 0xFFFF;
+  var b16 = other.low_ &#x3e;&#x3e;&#x3e; 16;
+  var b00 = other.low_ &#x26; 0xFFFF;
+
+  var c48 = 0, c32 = 0, c16 = 0, c00 = 0;
+  c00 += a00 + b00;
+  c16 += c00 &#x3e;&#x3e;&#x3e; 16;
+  c00 &#x26;= 0xFFFF;
+  c16 += a16 + b16;
+  c32 += c16 &#x3e;&#x3e;&#x3e; 16;
+  c16 &#x26;= 0xFFFF;
+  c32 += a32 + b32;
+  c48 += c32 &#x3e;&#x3e;&#x3e; 16;
+  c32 &#x26;= 0xFFFF;
+  c48 += a48 + b48;
+  c48 &#x26;= 0xFFFF;
+  return Long.fromBits((c16 &#x3c;&#x3c; 16) | c00, (c48 &#x3c;&#x3c; 16) | c32);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.NumberLong.prototype.and" id="apidoc.element.promised-mongo.NumberLong.prototype.and">
+        function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>and
+        <span class="apidocSignatureSpan">(other)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">and = function (other) {
+  return Long.fromBits(this.low_ &#x26; other.low_, this.high_ &#x26; other.high_);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.NumberLong.prototype.compare" id="apidoc.element.promised-mongo.NumberLong.prototype.compare">
+        function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>compare
+        <span class="apidocSignatureSpan">(other)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">compare = function (other) {
+  if (this.equals(other)) {
+    return 0;
+  }
+
+  var thisNeg = this.isNegative();
+  var otherNeg = other.isNegative();
+  if (thisNeg &#x26;&#x26; !otherNeg) {
+    return -1;
+  }
+  if (!thisNeg &#x26;&#x26; otherNeg) {
+    return 1;
+  }
+
+  // at this point, the signs are the same, so subtraction will not overflow
+  if (this.subtract(other).isNegative()) {
+    return -1;
+  } else {
+    return 1;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.NumberLong.prototype.div" id="apidoc.element.promised-mongo.NumberLong.prototype.div">
+        function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>div
+        <span class="apidocSignatureSpan">(other)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">div = function (other) {
+  if (other.isZero()) {
+    throw Error(&#x27;division by zero&#x27;);
+  } else if (this.isZero()) {
+    return Long.ZERO;
+  }
+
+  if (this.equals(Long.MIN_VALUE)) {
+    if (other.equals(Long.ONE) ||
+        other.equals(Long.NEG_ONE)) {
+      return Long.MIN_VALUE;  // recall that -MIN_VALUE == MIN_VALUE
+    } else if (other.equals(Long.MIN_VALUE)) {
+      return Long.ONE;
+    } else {
+      // At this point, we have |other| &#x3e;= 2, so |this/other| &#x3c; |MIN_VALUE|.
+      var halfThis = this.shiftRight(1);
+      var approx = halfThis.div(other).shiftLeft(1);
+      if (approx.equals(Long.ZERO)) {
+        return other.isNegative() ? Long.ONE : Long.NEG_ONE;
+      } else {
+        var rem = this.subtract(other.multiply(approx));
+        var result = approx.add(rem.div(other));
+        return result;
+      }
+    }
+  } else if (other.equals(Long.MIN_VALUE)) {
+    return Long.ZERO;
+  }
+
+  if (this.isNegative()) {
+    if (other.isNegative()) {
+      return this.negate().div(other.negate());
+    } else {
+      return this.negate().div(other).negate();
+    }
+  } else if (other.isNegative()) {
+    return this.div(other.negate()).negate();
+  }
+
+  // Repeat the following until the remainder is less than other:  find a
+  // floating-point that approximates remainder / other *from below*, add this
+  // into the result, and subtract it from the remainder.  It is critical that
+  // the approximate value is less than or equal to the real value so that the
+  // remainder never becomes negative.
+  var res = Long.ZERO;
+  var rem = this;
+  while (rem.greaterThanOrEqual(other)) {
+    // Approximate the result of division. This may be a little greater or
+    // smaller than the actual value.
+    var approx = Math.max(1, Math.floor(rem.toNumber() / other.toNumber()));
+
+    // We will tweak the approximate result by changing it in the 48-th digit or
+    // the smallest non-fractional digit, whichever is larger.
+    var log2 = Math.ceil(Math.log(approx) / Math.LN2);
+    var delta = (log2 &#x3c;= 48) ? 1 : Math.pow(2, log2 - 48);
+
+    // Decrease the approximation until it is smaller than the remainder.  Note
+    // that if it is too large, the product overflows and is negative.
+    var approxRes = Long.fromNumber(approx);
+    var approxRem = approxRes.multiply(other);
+    while (approxRem.isNegative() || approxRem.greaterThan(rem)) {
+      approx -= delta;
+      approxRes = Long.fromNumber(approx);
+      approxRem = approxRes.multiply(other);
+    }
+
+    // We know the answer can&#x27;t be zero... and actually, zero would cause
+    // infinite recursion since we would make no progress.
+    if (approxRes.isZero()) {
+      approxRes = Long.ONE;
+    }
+
+    res = res.add(approxRes);
+    rem = rem.subtract(approxRem);
+  }
+  return res;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.NumberLong.prototype.equals" id="apidoc.element.promised-mongo.NumberLong.prototype.equals">
+        function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>equals
+        <span class="apidocSignatureSpan">(other)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">equals = function (other) {
+  return (this.high_ == other.high_) &#x26;&#x26; (this.low_ == other.low_);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.NumberLong.prototype.getHighBits" id="apidoc.element.promised-mongo.NumberLong.prototype.getHighBits">
+        function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>getHighBits
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getHighBits = function () {
+  return this.high_;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.NumberLong.prototype.getLowBits" id="apidoc.element.promised-mongo.NumberLong.prototype.getLowBits">
+        function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>getLowBits
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getLowBits = function () {
+  return this.low_;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.NumberLong.prototype.getLowBitsUnsigned" id="apidoc.element.promised-mongo.NumberLong.prototype.getLowBitsUnsigned">
+        function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>getLowBitsUnsigned
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getLowBitsUnsigned = function () {
+  return (this.low_ &#x3e;= 0) ?
+      this.low_ : Long.TWO_PWR_32_DBL_ + this.low_;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.NumberLong.prototype.getNumBitsAbs" id="apidoc.element.promised-mongo.NumberLong.prototype.getNumBitsAbs">
+        function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>getNumBitsAbs
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getNumBitsAbs = function () {
+  if (this.isNegative()) {
+    if (this.equals(Long.MIN_VALUE)) {
+      return 64;
+    } else {
+      return this.negate().getNumBitsAbs();
+    }
+  } else {
+    var val = this.high_ != 0 ? this.high_ : this.low_;
+    for (var bit = 31; bit &#x3e; 0; bit--) {
+      if ((val &#x26; (1 &#x3c;&#x3c; bit)) != 0) {
+        break;
+      }
+    }
+    return this.high_ != 0 ? bit + 33 : bit + 1;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.NumberLong.prototype.greaterThan" id="apidoc.element.promised-mongo.NumberLong.prototype.greaterThan">
+        function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>greaterThan
+        <span class="apidocSignatureSpan">(other)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">greaterThan = function (other) {
+  return this.compare(other) &#x3e; 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.NumberLong.prototype.greaterThanOrEqual" id="apidoc.element.promised-mongo.NumberLong.prototype.greaterThanOrEqual">
+        function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>greaterThanOrEqual
+        <span class="apidocSignatureSpan">(other)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">greaterThanOrEqual = function (other) {
+  return this.compare(other) &#x3e;= 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.NumberLong.prototype.isNegative" id="apidoc.element.promised-mongo.NumberLong.prototype.isNegative">
+        function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>isNegative
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isNegative = function () {
+  return this.high_ &#x3c; 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.NumberLong.prototype.isOdd" id="apidoc.element.promised-mongo.NumberLong.prototype.isOdd">
+        function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>isOdd
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isOdd = function () {
+  return (this.low_ &#x26; 1) == 1;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.NumberLong.prototype.isZero" id="apidoc.element.promised-mongo.NumberLong.prototype.isZero">
+        function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>isZero
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isZero = function () {
+  return this.high_ == 0 &#x26;&#x26; this.low_ == 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.NumberLong.prototype.lessThan" id="apidoc.element.promised-mongo.NumberLong.prototype.lessThan">
+        function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>lessThan
+        <span class="apidocSignatureSpan">(other)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lessThan = function (other) {
+  return this.compare(other) &#x3c; 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.NumberLong.prototype.lessThanOrEqual" id="apidoc.element.promised-mongo.NumberLong.prototype.lessThanOrEqual">
+        function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>lessThanOrEqual
+        <span class="apidocSignatureSpan">(other)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lessThanOrEqual = function (other) {
+  return this.compare(other) &#x3c;= 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.NumberLong.prototype.modulo" id="apidoc.element.promised-mongo.NumberLong.prototype.modulo">
+        function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>modulo
+        <span class="apidocSignatureSpan">(other)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">modulo = function (other) {
+  return this.subtract(this.div(other).multiply(other));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.NumberLong.prototype.multiply" id="apidoc.element.promised-mongo.NumberLong.prototype.multiply">
+        function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>multiply
+        <span class="apidocSignatureSpan">(other)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">multiply = function (other) {
+  if (this.isZero()) {
+    return Long.ZERO;
+  } else if (other.isZero()) {
+    return Long.ZERO;
+  }
+
+  if (this.equals(Long.MIN_VALUE)) {
+    return other.isOdd() ? Long.MIN_VALUE : Long.ZERO;
+  } else if (other.equals(Long.MIN_VALUE)) {
+    return this.isOdd() ? Long.MIN_VALUE : Long.ZERO;
+  }
+
+  if (this.isNegative()) {
+    if (other.isNegative()) {
+      return this.negate().multiply(other.negate());
+    } else {
+      return this.negate().multiply(other).negate();
+    }
+  } else if (other.isNegative()) {
+    return this.multiply(other.negate()).negate();
+  }
+
+  // If both Longs are small, use float multiplication
+  if (this.lessThan(Long.TWO_PWR_24_) &#x26;&#x26;
+      other.lessThan(Long.TWO_PWR_24_)) {
+    return Long.fromNumber(this.toNumber() * other.toNumber());
+  }
+
+  // Divide each Long into 4 chunks of 16 bits, and then add up 4x4 products.
+  // We can skip products that would overflow.
+
+  var a48 = this.high_ &#x3e;&#x3e;&#x3e; 16;
+  var a32 = this.high_ &#x26; 0xFFFF;
+  var a16 = this.low_ &#x3e;&#x3e;&#x3e; 16;
+  var a00 = this.low_ &#x26; 0xFFFF;
+
+  var b48 = other.high_ &#x3e;&#x3e;&#x3e; 16;
+  var b32 = other.high_ &#x26; 0xFFFF;
+  var b16 = other.low_ &#x3e;&#x3e;&#x3e; 16;
+  var b00 = other.low_ &#x26; 0xFFFF;
+
+  var c48 = 0, c32 = 0, c16 = 0, c00 = 0;
+  c00 += a00 * b00;
+  c16 += c00 &#x3e;&#x3e;&#x3e; 16;
+  c00 &#x26;= 0xFFFF;
+  c16 += a16 * b00;
+  c32 += c16 &#x3e;&#x3e;&#x3e; 16;
+  c16 &#x26;= 0xFFFF;
+  c16 += a00 * b16;
+  c32 += c16 &#x3e;&#x3e;&#x3e; 16;
+  c16 &#x26;= 0xFFFF;
+  c32 += a32 * b00;
+  c48 += c32 &#x3e;&#x3e;&#x3e; 16;
+  c32 &#x26;= 0xFFFF;
+  c32 += a16 * b16;
+  c48 += c32 &#x3e;&#x3e;&#x3e; 16;
+  c32 &#x26;= 0xFFFF;
+  c32 += a00 * b32;
+  c48 += c32 &#x3e;&#x3e;&#x3e; 16;
+  c32 &#x26;= 0xFFFF;
+  c48 += a48 * b00 + a32 * b16 + a16 * b32 + a00 * b48;
+  c48 &#x26;= 0xFFFF;
+  return Long.fromBits((c16 &#x3c;&#x3c; 16) | c00, (c48 &#x3c;&#x3c; 16) | c32);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.NumberLong.prototype.negate" id="apidoc.element.promised-mongo.NumberLong.prototype.negate">
+        function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>negate
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">negate = function () {
+  if (this.equals(Long.MIN_VALUE)) {
+    return Long.MIN_VALUE;
+  } else {
+    return this.not().add(Long.ONE);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.NumberLong.prototype.not" id="apidoc.element.promised-mongo.NumberLong.prototype.not">
+        function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>not
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">not = function () {
+  return Long.fromBits(~this.low_, ~this.high_);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.NumberLong.prototype.notEquals" id="apidoc.element.promised-mongo.NumberLong.prototype.notEquals">
+        function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>notEquals
+        <span class="apidocSignatureSpan">(other)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">notEquals = function (other) {
+  return (this.high_ != other.high_) || (this.low_ != other.low_);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.NumberLong.prototype.or" id="apidoc.element.promised-mongo.NumberLong.prototype.or">
+        function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>or
+        <span class="apidocSignatureSpan">(other)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">or = function (other) {
+  return Long.fromBits(this.low_ | other.low_, this.high_ | other.high_);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.NumberLong.prototype.shiftLeft" id="apidoc.element.promised-mongo.NumberLong.prototype.shiftLeft">
+        function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>shiftLeft
+        <span class="apidocSignatureSpan">(numBits)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">shiftLeft = function (numBits) {
+  numBits &#x26;= 63;
+  if (numBits == 0) {
+    return this;
+  } else {
+    var low = this.low_;
+    if (numBits &#x3c; 32) {
+      var high = this.high_;
+      return Long.fromBits(
+                 low &#x3c;&#x3c; numBits,
+                 (high &#x3c;&#x3c; numBits) | (low &#x3e;&#x3e;&#x3e; (32 - numBits)));
+    } else {
+      return Long.fromBits(0, low &#x3c;&#x3c; (numBits - 32));
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.NumberLong.prototype.shiftRight" id="apidoc.element.promised-mongo.NumberLong.prototype.shiftRight">
+        function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>shiftRight
+        <span class="apidocSignatureSpan">(numBits)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">shiftRight = function (numBits) {
+  numBits &#x26;= 63;
+  if (numBits == 0) {
+    return this;
+  } else {
+    var high = this.high_;
+    if (numBits &#x3c; 32) {
+      var low = this.low_;
+      return Long.fromBits(
+                 (low &#x3e;&#x3e;&#x3e; numBits) | (high &#x3c;&#x3c; (32 - numBits)),
+                 high &#x3e;&#x3e; numBits);
+    } else {
+      return Long.fromBits(
+                 high &#x3e;&#x3e; (numBits - 32),
+                 high &#x3e;= 0 ? 0 : -1);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.NumberLong.prototype.shiftRightUnsigned" id="apidoc.element.promised-mongo.NumberLong.prototype.shiftRightUnsigned">
+        function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>shiftRightUnsigned
+        <span class="apidocSignatureSpan">(numBits)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">shiftRightUnsigned = function (numBits) {
+  numBits &#x26;= 63;
+  if (numBits == 0) {
+    return this;
+  } else {
+    var high = this.high_;
+    if (numBits &#x3c; 32) {
+      var low = this.low_;
+      return Long.fromBits(
+                 (low &#x3e;&#x3e;&#x3e; numBits) | (high &#x3c;&#x3c; (32 - numBits)),
+                 high &#x3e;&#x3e;&#x3e; numBits);
+    } else if (numBits == 32) {
+      return Long.fromBits(high, 0);
+    } else {
+      return Long.fromBits(high &#x3e;&#x3e;&#x3e; (numBits - 32), 0);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.NumberLong.prototype.subtract" id="apidoc.element.promised-mongo.NumberLong.prototype.subtract">
+        function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>subtract
+        <span class="apidocSignatureSpan">(other)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">subtract = function (other) {
+  return this.add(other.negate());
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.NumberLong.prototype.toInt" id="apidoc.element.promised-mongo.NumberLong.prototype.toInt">
+        function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>toInt
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toInt = function () {
+  return this.low_;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.NumberLong.prototype.toJSON" id="apidoc.element.promised-mongo.NumberLong.prototype.toJSON">
+        function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>toJSON
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toJSON = function () {
+  return this.toString();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.NumberLong.prototype.toNumber" id="apidoc.element.promised-mongo.NumberLong.prototype.toNumber">
+        function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>toNumber
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toNumber = function () {
+  return this.high_ * Long.TWO_PWR_32_DBL_ +
+         this.getLowBitsUnsigned();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.NumberLong.prototype.toString" id="apidoc.element.promised-mongo.NumberLong.prototype.toString">
+        function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>toString
+        <span class="apidocSignatureSpan">(opt_radix)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function (opt_radix) {
+  var radix = opt_radix || 10;
+  if (radix &#x3c; 2 || 36 &#x3c; radix) {
+    throw Error(&#x27;radix out of range: &#x27; + radix);
+  }
+
+  if (this.isZero()) {
+    return &#x27;0&#x27;;
+  }
+
+  if (this.isNegative()) {
+    if (this.equals(Long.MIN_VALUE)) {
+      // We need to change the Long value before it can be negated, so we remove
+      // the bottom-most digit in this base and then recurse to do the rest.
+      var radixLong = Long.fromNumber(radix);
+      var div = this.div(radixLong);
+      var rem = div.multiply(radixLong).subtract(this);
+      return div.toString(radix) + rem.toInt().toString(radix);
+    } else {
+      return &#x27;-&#x27; + this.negate().toString(radix);
+    }
+  }
+
+  // Do several (6) digits each time through the loop, so as to
+  // minimize the calls to the very expensive emulated div.
+  var radixToPower = Long.fromNumber(Math.pow(radix, 6));
+
+  var rem = this;
+  var result = &#x27;&#x27;;
+  while (true) {
+    var remDiv = rem.div(radixToPower);
+    var intval = rem.subtract(remDiv.multiply(radixToPower)).toInt();
+    var digits = intval.toString(radix);
+
+    rem = remDiv;
+    if (rem.isZero()) {
+      return digits + result;
+    } else {
+      while (digits.length &#x3c; 6) {
+        digits = &#x27;0&#x27; + digits;
+      }
+      result = &#x27;&#x27; + digits + result;
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	// docs is now a sorted array
+});
+
+// find a document using a native ObjectId
+db.mycollection.findOne({
+	_id: pmongo.ObjectId(&#x27;523209c4561c640000000001&#x27;)
+}).then(function(doc) {
+	// doc._id.<span class="apidocCodeKeywordSpan">toString</span>() === &#x27;523209c4561c640000000001&#x27;
+});
+
+// find all named &#x27;mathias&#x27; and increment their level
+db.mycollection.update({name:&#x27;mathias&#x27;}, {$inc:{level:1}}, {multi:true})
+	.then(function(lastErrorObject) {
+		// the update is complete
+	});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.NumberLong.prototype.xor" id="apidoc.element.promised-mongo.NumberLong.prototype.xor">
+        function <span class="apidocSignatureSpan">promised-mongo.NumberLong.prototype.</span>xor
+        <span class="apidocSignatureSpan">(other)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">xor = function (other) {
+  return Long.fromBits(this.low_ ^ other.low_, this.high_ ^ other.high_);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.promised-mongo.ObjectId" id="apidoc.module.promised-mongo.ObjectId">module promised-mongo.ObjectId</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.ObjectId.ObjectId" id="apidoc.element.promised-mongo.ObjectId.ObjectId">
+        function <span class="apidocSignatureSpan">promised-mongo.</span>ObjectId
+        <span class="apidocSignatureSpan">(id)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ObjectID(id) {
+  if(!(this instanceof ObjectID)) return new ObjectID(id);
+  // Duck-typing to support ObjectId from different npm packages
+  if((id instanceof ObjectID) || (id &#x26;&#x26; id.toHexString)) return id;
+
+  this._bsontype = &#x27;ObjectID&#x27;;
+  var __id = null;
+  var valid = ObjectID.isValid(id);
+
+  // Throw an error if it&#x27;s not a valid setup
+  if(!valid &#x26;&#x26; id != null){
+    throw new Error(&#x22;Argument passed in must be a single String of 12 bytes or a string of 24 hex characters&#x22;);
+  } else if(valid &#x26;&#x26; typeof id == &#x27;string&#x27; &#x26;&#x26; id.length == 24) {
+    return ObjectID.createFromHexString(id);
+  } else if(id == null || typeof id == &#x27;number&#x27;) {
+    // convert to 12 byte binary string
+    this.id = this.generate(id);
+  } else if(id != null &#x26;&#x26; id.length === 12) {
+    // assume 12 byte string
+    this.id = id;
+  }
+
+  if(ObjectID.cacheHexString) this.__id = this.toHexString();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// find everything, but sort by name
+db.mycollection.find().sort({name:1}).toArray().then(function(docs) {
+	// docs is now a sorted array
+});
+
+// find a document using a native ObjectId
+db.mycollection.findOne({
+	_id: pmongo.<span class="apidocCodeKeywordSpan">ObjectId</span>(&#x27;523209c4561c640000000001&#x27;)
+}).then(function(doc) {
+	// doc._id.toString() === &#x27;523209c4561c640000000001&#x27;
+});
+
+// find all named &#x27;mathias&#x27; and increment their level
+db.mycollection.update({name:&#x27;mathias&#x27;}, {$inc:{level:1}}, {multi:true})
+	.then(function(lastErrorObject) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.ObjectId.ObjectID" id="apidoc.element.promised-mongo.ObjectId.ObjectID">
+        function <span class="apidocSignatureSpan">promised-mongo.ObjectId.</span>ObjectID
+        <span class="apidocSignatureSpan">(id)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ObjectID(id) {
+  if(!(this instanceof ObjectID)) return new ObjectID(id);
+  // Duck-typing to support ObjectId from different npm packages
+  if((id instanceof ObjectID) || (id &#x26;&#x26; id.toHexString)) return id;
+
+  this._bsontype = &#x27;ObjectID&#x27;;
+  var __id = null;
+  var valid = ObjectID.isValid(id);
+
+  // Throw an error if it&#x27;s not a valid setup
+  if(!valid &#x26;&#x26; id != null){
+    throw new Error(&#x22;Argument passed in must be a single String of 12 bytes or a string of 24 hex characters&#x22;);
+  } else if(valid &#x26;&#x26; typeof id == &#x27;string&#x27; &#x26;&#x26; id.length == 24) {
+    return ObjectID.createFromHexString(id);
+  } else if(id == null || typeof id == &#x27;number&#x27;) {
+    // convert to 12 byte binary string
+    this.id = this.generate(id);
+  } else if(id != null &#x26;&#x26; id.length === 12) {
+    // assume 12 byte string
+    this.id = id;
+  }
+
+  if(ObjectID.cacheHexString) this.__id = this.toHexString();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.ObjectId.createFromHexString" id="apidoc.element.promised-mongo.ObjectId.createFromHexString">
+        function <span class="apidocSignatureSpan">promised-mongo.ObjectId.</span>createFromHexString
+        <span class="apidocSignatureSpan">(hexString)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createFromHexString(hexString) {
+  // Throw an error if it&#x27;s not a valid setup
+  if(typeof hexString === &#x27;undefined&#x27; || hexString != null &#x26;&#x26; hexString.length != 24)
+    throw new Error(&#x22;Argument passed in must be a single String of 12 bytes or a string of 24 hex characters&#x22;);
+
+  var len = hexString.length;
+
+  if(len &#x3e; 12*2) {
+    throw new Error(&#x27;Id cannot be longer than 12 bytes&#x27;);
+  }
+
+  var result = &#x27;&#x27;
+    , string
+    , number;
+
+  for (var index = 0; index &#x3c; len; index += 2) {
+    string = hexString.substr(index, 2);
+    number = parseInt(string, 16);
+    result += BinaryParser.fromByte(number);
+  }
+
+  return new ObjectID(result, hexString);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.ObjectId.createFromTime" id="apidoc.element.promised-mongo.ObjectId.createFromTime">
+        function <span class="apidocSignatureSpan">promised-mongo.ObjectId.</span>createFromTime
+        <span class="apidocSignatureSpan">(time)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createFromTime(time) {
+  var id = BinaryParser.encodeInt(time, 32, true, true) +
+           BinaryParser.encodeInt(0, 64, true, true);
+  return new ObjectID(id);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.ObjectId.createPk" id="apidoc.element.promised-mongo.ObjectId.createPk">
+        function <span class="apidocSignatureSpan">promised-mongo.ObjectId.</span>createPk
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createPk() {
+  return new ObjectID();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.ObjectId.isValid" id="apidoc.element.promised-mongo.ObjectId.isValid">
+        function <span class="apidocSignatureSpan">promised-mongo.ObjectId.</span>isValid
+        <span class="apidocSignatureSpan">(id)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isValid(id) {
+  if(id == null) return false;
+
+  if(typeof id == &#x27;number&#x27;)
+    return true;
+  if(typeof id == &#x27;string&#x27;) {
+    return id.length == 12 || (id.length == 24 &#x26;&#x26; checkForHexRegExp.test(id));
+  }
+  if(id instanceof ObjectID) {
+    return true;
+  }
+  // Duck-Typing detection of ObjectId like objects
+  if(id.toHexString) {
+    return id.id.length == 12 || (id.id.length == 24 &#x26;&#x26; checkForHexRegExp.test(id.id));
+  }
+  return false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.promised-mongo.ObjectId.prototype" id="apidoc.module.promised-mongo.ObjectId.prototype">module promised-mongo.ObjectId.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.ObjectId.prototype.equals" id="apidoc.element.promised-mongo.ObjectId.prototype.equals">
+        function <span class="apidocSignatureSpan">promised-mongo.ObjectId.prototype.</span>equals
+        <span class="apidocSignatureSpan">(otherID)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function equals(otherID) {
+  var id;
+
+  if(otherID != null &#x26;&#x26; (otherID instanceof ObjectID || otherID.toHexString)) {
+    id = otherID.id;
+  } else if(typeof otherID == &#x27;string&#x27; &#x26;&#x26; ObjectID.isValid(otherID)) {
+    id = ObjectID.createFromHexString(otherID).id;
+  } else {
+    return false;
+  }
+
+  return this.id === id;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.ObjectId.prototype.generate" id="apidoc.element.promised-mongo.ObjectId.prototype.generate">
+        function <span class="apidocSignatureSpan">promised-mongo.ObjectId.prototype.</span>generate
+        <span class="apidocSignatureSpan">(time)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">generate = function (time) {
+  if (&#x27;number&#x27; != typeof time) {
+    time = parseInt(Date.now()/1000,10);
+  }
+
+  var time4Bytes = BinaryParser.encodeInt(time, 32, true, true);
+<span class="apidocCodeCommentSpan">  /* for time-based ObjectID the bytes following the time will be zeroed */
+</span>  var machine3Bytes = BinaryParser.encodeInt(MACHINE_ID, 24, false);
+  var pid2Bytes = BinaryParser.fromShort((typeof process === &#x27;undefined&#x27; ? Math.floor(Math.random() * 100000) : process.pid) % 0xFFFF
+);
+  var index3Bytes = BinaryParser.encodeInt(this.get_inc(), 24, false, true);
+
+  return time4Bytes + machine3Bytes + pid2Bytes + index3Bytes;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.ObjectId.prototype.getInc" id="apidoc.element.promised-mongo.ObjectId.prototype.getInc">
+        function <span class="apidocSignatureSpan">promised-mongo.ObjectId.prototype.</span>getInc
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getInc = function () {
+  return this.get_inc();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.ObjectId.prototype.getTimestamp" id="apidoc.element.promised-mongo.ObjectId.prototype.getTimestamp">
+        function <span class="apidocSignatureSpan">promised-mongo.ObjectId.prototype.</span>getTimestamp
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getTimestamp = function () {
+  var timestamp = new Date();
+  timestamp.setTime(Math.floor(BinaryParser.decodeInt(this.id.substring(0,4), 32, true, true)) * 1000);
+  return timestamp;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.ObjectId.prototype.get_inc" id="apidoc.element.promised-mongo.ObjectId.prototype.get_inc">
+        function <span class="apidocSignatureSpan">promised-mongo.ObjectId.prototype.</span>get_inc
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get_inc = function () {
+  return ObjectID.index = (ObjectID.index + 1) % 0xFFFFFF;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.ObjectId.prototype.inspect" id="apidoc.element.promised-mongo.ObjectId.prototype.inspect">
+        function <span class="apidocSignatureSpan">promised-mongo.ObjectId.prototype.</span>inspect
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">inspect = function () {
+  return this.toHexString();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.ObjectId.prototype.toHexString" id="apidoc.element.promised-mongo.ObjectId.prototype.toHexString">
+        function <span class="apidocSignatureSpan">promised-mongo.ObjectId.prototype.</span>toHexString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toHexString = function () {
+  if(ObjectID.cacheHexString &#x26;&#x26; this.__id) return this.__id;
+
+  var hexString = &#x27;&#x27;;
+
+  for (var i = 0; i &#x3c; this.id.length; i++) {
+    hexString += hexTable[this.id.charCodeAt(i)];
+  }
+
+  if(ObjectID.cacheHexString) this.__id = hexString;
+  return hexString;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.ObjectId.prototype.toJSON" id="apidoc.element.promised-mongo.ObjectId.prototype.toJSON">
+        function <span class="apidocSignatureSpan">promised-mongo.ObjectId.prototype.</span>toJSON
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toJSON = function () {
+  return this.toHexString();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.ObjectId.prototype.toString" id="apidoc.element.promised-mongo.ObjectId.prototype.toString">
+        function <span class="apidocSignatureSpan">promised-mongo.ObjectId.prototype.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+  return this.toHexString();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	// docs is now a sorted array
+});
+
+// find a document using a native ObjectId
+db.mycollection.findOne({
+	_id: pmongo.ObjectId(&#x27;523209c4561c640000000001&#x27;)
+}).then(function(doc) {
+	// doc._id.<span class="apidocCodeKeywordSpan">toString</span>() === &#x27;523209c4561c640000000001&#x27;
+});
+
+// find all named &#x27;mathias&#x27; and increment their level
+db.mycollection.update({name:&#x27;mathias&#x27;}, {$inc:{level:1}}, {multi:true})
+	.then(function(lastErrorObject) {
+		// the update is complete
+	});
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.promised-mongo.Timestamp" id="apidoc.module.promised-mongo.Timestamp">module promised-mongo.Timestamp</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.Timestamp.Timestamp" id="apidoc.element.promised-mongo.Timestamp.Timestamp">
+        function <span class="apidocSignatureSpan">promised-mongo.</span>Timestamp
+        <span class="apidocSignatureSpan">(low, high)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Timestamp(low, high) {
+  if(!(this instanceof Timestamp)) return new Timestamp(low, high);
+  this._bsontype = &#x27;Timestamp&#x27;;
+<span class="apidocCodeCommentSpan">  /**
+   * @type {number}
+   * @ignore
+   */
+</span>  this.low_ = low | 0;  // force into 32 signed bits.
+
+  /**
+   * @type {number}
+   * @ignore
+   */
+  this.high_ = high | 0;  // force into 32 signed bits.
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.Timestamp.fromBits" id="apidoc.element.promised-mongo.Timestamp.fromBits">
+        function <span class="apidocSignatureSpan">promised-mongo.Timestamp.</span>fromBits
+        <span class="apidocSignatureSpan">(lowBits, highBits)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fromBits = function (lowBits, highBits) {
+  return new Timestamp(lowBits, highBits);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.Timestamp.fromInt" id="apidoc.element.promised-mongo.Timestamp.fromInt">
+        function <span class="apidocSignatureSpan">promised-mongo.Timestamp.</span>fromInt
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fromInt = function (value) {
+  if (-128 &#x3c;= value &#x26;&#x26; value &#x3c; 128) {
+    var cachedObj = Timestamp.INT_CACHE_[value];
+    if (cachedObj) {
+      return cachedObj;
+    }
+  }
+
+  var obj = new Timestamp(value | 0, value &#x3c; 0 ? -1 : 0);
+  if (-128 &#x3c;= value &#x26;&#x26; value &#x3c; 128) {
+    Timestamp.INT_CACHE_[value] = obj;
+  }
+  return obj;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.Timestamp.fromNumber" id="apidoc.element.promised-mongo.Timestamp.fromNumber">
+        function <span class="apidocSignatureSpan">promised-mongo.Timestamp.</span>fromNumber
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fromNumber = function (value) {
+  if (isNaN(value) || !isFinite(value)) {
+    return Timestamp.ZERO;
+  } else if (value &#x3c;= -Timestamp.TWO_PWR_63_DBL_) {
+    return Timestamp.MIN_VALUE;
+  } else if (value + 1 &#x3e;= Timestamp.TWO_PWR_63_DBL_) {
+    return Timestamp.MAX_VALUE;
+  } else if (value &#x3c; 0) {
+    return Timestamp.fromNumber(-value).negate();
+  } else {
+    return new Timestamp(
+               (value % Timestamp.TWO_PWR_32_DBL_) | 0,
+               (value / Timestamp.TWO_PWR_32_DBL_) | 0);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.Timestamp.fromString" id="apidoc.element.promised-mongo.Timestamp.fromString">
+        function <span class="apidocSignatureSpan">promised-mongo.Timestamp.</span>fromString
+        <span class="apidocSignatureSpan">(str, opt_radix)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fromString = function (str, opt_radix) {
+  if (str.length == 0) {
+    throw Error(&#x27;number format error: empty string&#x27;);
+  }
+
+  var radix = opt_radix || 10;
+  if (radix &#x3c; 2 || 36 &#x3c; radix) {
+    throw Error(&#x27;radix out of range: &#x27; + radix);
+  }
+
+  if (str.charAt(0) == &#x27;-&#x27;) {
+    return Timestamp.fromString(str.substring(1), radix).negate();
+  } else if (str.indexOf(&#x27;-&#x27;) &#x3e;= 0) {
+    throw Error(&#x27;number format error: interior &#x22;-&#x22; character: &#x27; + str);
+  }
+
+  // Do several (8) digits each time through the loop, so as to
+  // minimize the calls to the very expensive emulated div.
+  var radixToPower = Timestamp.fromNumber(Math.pow(radix, 8));
+
+  var result = Timestamp.ZERO;
+  for (var i = 0; i &#x3c; str.length; i += 8) {
+    var size = Math.min(8, str.length - i);
+    var value = parseInt(str.substring(i, i + size), radix);
+    if (size &#x3c; 8) {
+      var power = Timestamp.fromNumber(Math.pow(radix, size));
+      result = result.multiply(power).add(Timestamp.fromNumber(value));
+    } else {
+      result = result.multiply(radixToPower);
+      result = result.add(Timestamp.fromNumber(value));
+    }
+  }
+  return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.promised-mongo.Timestamp.prototype" id="apidoc.module.promised-mongo.Timestamp.prototype">module promised-mongo.Timestamp.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.Timestamp.prototype.add" id="apidoc.element.promised-mongo.Timestamp.prototype.add">
+        function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>add
+        <span class="apidocSignatureSpan">(other)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">add = function (other) {
+  // Divide each number into 4 chunks of 16 bits, and then sum the chunks.
+
+  var a48 = this.high_ &#x3e;&#x3e;&#x3e; 16;
+  var a32 = this.high_ &#x26; 0xFFFF;
+  var a16 = this.low_ &#x3e;&#x3e;&#x3e; 16;
+  var a00 = this.low_ &#x26; 0xFFFF;
+
+  var b48 = other.high_ &#x3e;&#x3e;&#x3e; 16;
+  var b32 = other.high_ &#x26; 0xFFFF;
+  var b16 = other.low_ &#x3e;&#x3e;&#x3e; 16;
+  var b00 = other.low_ &#x26; 0xFFFF;
+
+  var c48 = 0, c32 = 0, c16 = 0, c00 = 0;
+  c00 += a00 + b00;
+  c16 += c00 &#x3e;&#x3e;&#x3e; 16;
+  c00 &#x26;= 0xFFFF;
+  c16 += a16 + b16;
+  c32 += c16 &#x3e;&#x3e;&#x3e; 16;
+  c16 &#x26;= 0xFFFF;
+  c32 += a32 + b32;
+  c48 += c32 &#x3e;&#x3e;&#x3e; 16;
+  c32 &#x26;= 0xFFFF;
+  c48 += a48 + b48;
+  c48 &#x26;= 0xFFFF;
+  return Timestamp.fromBits((c16 &#x3c;&#x3c; 16) | c00, (c48 &#x3c;&#x3c; 16) | c32);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.Timestamp.prototype.and" id="apidoc.element.promised-mongo.Timestamp.prototype.and">
+        function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>and
+        <span class="apidocSignatureSpan">(other)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">and = function (other) {
+  return Timestamp.fromBits(this.low_ &#x26; other.low_, this.high_ &#x26; other.high_);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.Timestamp.prototype.compare" id="apidoc.element.promised-mongo.Timestamp.prototype.compare">
+        function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>compare
+        <span class="apidocSignatureSpan">(other)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">compare = function (other) {
+  if (this.equals(other)) {
+    return 0;
+  }
+
+  var thisNeg = this.isNegative();
+  var otherNeg = other.isNegative();
+  if (thisNeg &#x26;&#x26; !otherNeg) {
+    return -1;
+  }
+  if (!thisNeg &#x26;&#x26; otherNeg) {
+    return 1;
+  }
+
+  // at this point, the signs are the same, so subtraction will not overflow
+  if (this.subtract(other).isNegative()) {
+    return -1;
+  } else {
+    return 1;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.Timestamp.prototype.div" id="apidoc.element.promised-mongo.Timestamp.prototype.div">
+        function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>div
+        <span class="apidocSignatureSpan">(other)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">div = function (other) {
+  if (other.isZero()) {
+    throw Error(&#x27;division by zero&#x27;);
+  } else if (this.isZero()) {
+    return Timestamp.ZERO;
+  }
+
+  if (this.equals(Timestamp.MIN_VALUE)) {
+    if (other.equals(Timestamp.ONE) ||
+        other.equals(Timestamp.NEG_ONE)) {
+      return Timestamp.MIN_VALUE;  // recall that -MIN_VALUE == MIN_VALUE
+    } else if (other.equals(Timestamp.MIN_VALUE)) {
+      return Timestamp.ONE;
+    } else {
+      // At this point, we have |other| &#x3e;= 2, so |this/other| &#x3c; |MIN_VALUE|.
+      var halfThis = this.shiftRight(1);
+      var approx = halfThis.div(other).shiftLeft(1);
+      if (approx.equals(Timestamp.ZERO)) {
+        return other.isNegative() ? Timestamp.ONE : Timestamp.NEG_ONE;
+      } else {
+        var rem = this.subtract(other.multiply(approx));
+        var result = approx.add(rem.div(other));
+        return result;
+      }
+    }
+  } else if (other.equals(Timestamp.MIN_VALUE)) {
+    return Timestamp.ZERO;
+  }
+
+  if (this.isNegative()) {
+    if (other.isNegative()) {
+      return this.negate().div(other.negate());
+    } else {
+      return this.negate().div(other).negate();
+    }
+  } else if (other.isNegative()) {
+    return this.div(other.negate()).negate();
+  }
+
+  // Repeat the following until the remainder is less than other:  find a
+  // floating-point that approximates remainder / other *from below*, add this
+  // into the result, and subtract it from the remainder.  It is critical that
+  // the approximate value is less than or equal to the real value so that the
+  // remainder never becomes negative.
+  var res = Timestamp.ZERO;
+  var rem = this;
+  while (rem.greaterThanOrEqual(other)) {
+    // Approximate the result of division. This may be a little greater or
+    // smaller than the actual value.
+    var approx = Math.max(1, Math.floor(rem.toNumber() / other.toNumber()));
+
+    // We will tweak the approximate result by changing it in the 48-th digit or
+    // the smallest non-fractional digit, whichever is larger.
+    var log2 = Math.ceil(Math.log(approx) / Math.LN2);
+    var delta = (log2 &#x3c;= 48) ? 1 : Math.pow(2, log2 - 48);
+
+    // Decrease the approximation until it is smaller than the remainder.  Note
+    // that if it is too large, the product overflows and is negative.
+    var approxRes = Timestamp.fromNumber(approx);
+    var approxRem = approxRes.multiply(other);
+    while (approxRem.isNegative() || approxRem.greaterThan(rem)) {
+      approx -= delta;
+      approxRes = Timestamp.fromNumber(approx);
+      approxRem = approxRes.multiply(other);
+    }
+
+    // We know the answer can&#x27;t be zero... and actually, zero would cause
+    // infinite recursion since we would make no progress.
+    if (approxRes.isZero()) {
+      approxRes = Timestamp.ONE;
+    }
+
+    res = res.add(approxRes);
+    rem = rem.subtract(approxRem);
+  }
+  return res;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.Timestamp.prototype.equals" id="apidoc.element.promised-mongo.Timestamp.prototype.equals">
+        function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>equals
+        <span class="apidocSignatureSpan">(other)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">equals = function (other) {
+  return (this.high_ == other.high_) &#x26;&#x26; (this.low_ == other.low_);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.Timestamp.prototype.getHighBits" id="apidoc.element.promised-mongo.Timestamp.prototype.getHighBits">
+        function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>getHighBits
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getHighBits = function () {
+  return this.high_;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.Timestamp.prototype.getLowBits" id="apidoc.element.promised-mongo.Timestamp.prototype.getLowBits">
+        function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>getLowBits
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getLowBits = function () {
+  return this.low_;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.Timestamp.prototype.getLowBitsUnsigned" id="apidoc.element.promised-mongo.Timestamp.prototype.getLowBitsUnsigned">
+        function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>getLowBitsUnsigned
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getLowBitsUnsigned = function () {
+  return (this.low_ &#x3e;= 0) ?
+      this.low_ : Timestamp.TWO_PWR_32_DBL_ + this.low_;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.Timestamp.prototype.getNumBitsAbs" id="apidoc.element.promised-mongo.Timestamp.prototype.getNumBitsAbs">
+        function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>getNumBitsAbs
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getNumBitsAbs = function () {
+  if (this.isNegative()) {
+    if (this.equals(Timestamp.MIN_VALUE)) {
+      return 64;
+    } else {
+      return this.negate().getNumBitsAbs();
+    }
+  } else {
+    var val = this.high_ != 0 ? this.high_ : this.low_;
+    for (var bit = 31; bit &#x3e; 0; bit--) {
+      if ((val &#x26; (1 &#x3c;&#x3c; bit)) != 0) {
+        break;
+      }
+    }
+    return this.high_ != 0 ? bit + 33 : bit + 1;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.Timestamp.prototype.greaterThan" id="apidoc.element.promised-mongo.Timestamp.prototype.greaterThan">
+        function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>greaterThan
+        <span class="apidocSignatureSpan">(other)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">greaterThan = function (other) {
+  return this.compare(other) &#x3e; 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.Timestamp.prototype.greaterThanOrEqual" id="apidoc.element.promised-mongo.Timestamp.prototype.greaterThanOrEqual">
+        function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>greaterThanOrEqual
+        <span class="apidocSignatureSpan">(other)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">greaterThanOrEqual = function (other) {
+  return this.compare(other) &#x3e;= 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.Timestamp.prototype.isNegative" id="apidoc.element.promised-mongo.Timestamp.prototype.isNegative">
+        function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>isNegative
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isNegative = function () {
+  return this.high_ &#x3c; 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.Timestamp.prototype.isOdd" id="apidoc.element.promised-mongo.Timestamp.prototype.isOdd">
+        function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>isOdd
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isOdd = function () {
+  return (this.low_ &#x26; 1) == 1;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.Timestamp.prototype.isZero" id="apidoc.element.promised-mongo.Timestamp.prototype.isZero">
+        function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>isZero
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isZero = function () {
+  return this.high_ == 0 &#x26;&#x26; this.low_ == 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.Timestamp.prototype.lessThan" id="apidoc.element.promised-mongo.Timestamp.prototype.lessThan">
+        function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>lessThan
+        <span class="apidocSignatureSpan">(other)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lessThan = function (other) {
+  return this.compare(other) &#x3c; 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.Timestamp.prototype.lessThanOrEqual" id="apidoc.element.promised-mongo.Timestamp.prototype.lessThanOrEqual">
+        function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>lessThanOrEqual
+        <span class="apidocSignatureSpan">(other)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lessThanOrEqual = function (other) {
+  return this.compare(other) &#x3c;= 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.Timestamp.prototype.modulo" id="apidoc.element.promised-mongo.Timestamp.prototype.modulo">
+        function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>modulo
+        <span class="apidocSignatureSpan">(other)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">modulo = function (other) {
+  return this.subtract(this.div(other).multiply(other));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.Timestamp.prototype.multiply" id="apidoc.element.promised-mongo.Timestamp.prototype.multiply">
+        function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>multiply
+        <span class="apidocSignatureSpan">(other)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">multiply = function (other) {
+  if (this.isZero()) {
+    return Timestamp.ZERO;
+  } else if (other.isZero()) {
+    return Timestamp.ZERO;
+  }
+
+  if (this.equals(Timestamp.MIN_VALUE)) {
+    return other.isOdd() ? Timestamp.MIN_VALUE : Timestamp.ZERO;
+  } else if (other.equals(Timestamp.MIN_VALUE)) {
+    return this.isOdd() ? Timestamp.MIN_VALUE : Timestamp.ZERO;
+  }
+
+  if (this.isNegative()) {
+    if (other.isNegative()) {
+      return this.negate().multiply(other.negate());
+    } else {
+      return this.negate().multiply(other).negate();
+    }
+  } else if (other.isNegative()) {
+    return this.multiply(other.negate()).negate();
+  }
+
+  // If both Timestamps are small, use float multiplication
+  if (this.lessThan(Timestamp.TWO_PWR_24_) &#x26;&#x26;
+      other.lessThan(Timestamp.TWO_PWR_24_)) {
+    return Timestamp.fromNumber(this.toNumber() * other.toNumber());
+  }
+
+  // Divide each Timestamp into 4 chunks of 16 bits, and then add up 4x4 products.
+  // We can skip products that would overflow.
+
+  var a48 = this.high_ &#x3e;&#x3e;&#x3e; 16;
+  var a32 = this.high_ &#x26; 0xFFFF;
+  var a16 = this.low_ &#x3e;&#x3e;&#x3e; 16;
+  var a00 = this.low_ &#x26; 0xFFFF;
+
+  var b48 = other.high_ &#x3e;&#x3e;&#x3e; 16;
+  var b32 = other.high_ &#x26; 0xFFFF;
+  var b16 = other.low_ &#x3e;&#x3e;&#x3e; 16;
+  var b00 = other.low_ &#x26; 0xFFFF;
+
+  var c48 = 0, c32 = 0, c16 = 0, c00 = 0;
+  c00 += a00 * b00;
+  c16 += c00 &#x3e;&#x3e;&#x3e; 16;
+  c00 &#x26;= 0xFFFF;
+  c16 += a16 * b00;
+  c32 += c16 &#x3e;&#x3e;&#x3e; 16;
+  c16 &#x26;= 0xFFFF;
+  c16 += a00 * b16;
+  c32 += c16 &#x3e;&#x3e;&#x3e; 16;
+  c16 &#x26;= 0xFFFF;
+  c32 += a32 * b00;
+  c48 += c32 &#x3e;&#x3e;&#x3e; 16;
+  c32 &#x26;= 0xFFFF;
+  c32 += a16 * b16;
+  c48 += c32 &#x3e;&#x3e;&#x3e; 16;
+  c32 &#x26;= 0xFFFF;
+  c32 += a00 * b32;
+  c48 += c32 &#x3e;&#x3e;&#x3e; 16;
+  c32 &#x26;= 0xFFFF;
+  c48 += a48 * b00 + a32 * b16 + a16 * b32 + a00 * b48;
+  c48 &#x26;= 0xFFFF;
+  return Timestamp.fromBits((c16 &#x3c;&#x3c; 16) | c00, (c48 &#x3c;&#x3c; 16) | c32);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.Timestamp.prototype.negate" id="apidoc.element.promised-mongo.Timestamp.prototype.negate">
+        function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>negate
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">negate = function () {
+  if (this.equals(Timestamp.MIN_VALUE)) {
+    return Timestamp.MIN_VALUE;
+  } else {
+    return this.not().add(Timestamp.ONE);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.Timestamp.prototype.not" id="apidoc.element.promised-mongo.Timestamp.prototype.not">
+        function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>not
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">not = function () {
+  return Timestamp.fromBits(~this.low_, ~this.high_);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.Timestamp.prototype.notEquals" id="apidoc.element.promised-mongo.Timestamp.prototype.notEquals">
+        function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>notEquals
+        <span class="apidocSignatureSpan">(other)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">notEquals = function (other) {
+  return (this.high_ != other.high_) || (this.low_ != other.low_);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.Timestamp.prototype.or" id="apidoc.element.promised-mongo.Timestamp.prototype.or">
+        function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>or
+        <span class="apidocSignatureSpan">(other)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">or = function (other) {
+  return Timestamp.fromBits(this.low_ | other.low_, this.high_ | other.high_);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.Timestamp.prototype.shiftLeft" id="apidoc.element.promised-mongo.Timestamp.prototype.shiftLeft">
+        function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>shiftLeft
+        <span class="apidocSignatureSpan">(numBits)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">shiftLeft = function (numBits) {
+  numBits &#x26;= 63;
+  if (numBits == 0) {
+    return this;
+  } else {
+    var low = this.low_;
+    if (numBits &#x3c; 32) {
+      var high = this.high_;
+      return Timestamp.fromBits(
+                 low &#x3c;&#x3c; numBits,
+                 (high &#x3c;&#x3c; numBits) | (low &#x3e;&#x3e;&#x3e; (32 - numBits)));
+    } else {
+      return Timestamp.fromBits(0, low &#x3c;&#x3c; (numBits - 32));
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.Timestamp.prototype.shiftRight" id="apidoc.element.promised-mongo.Timestamp.prototype.shiftRight">
+        function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>shiftRight
+        <span class="apidocSignatureSpan">(numBits)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">shiftRight = function (numBits) {
+  numBits &#x26;= 63;
+  if (numBits == 0) {
+    return this;
+  } else {
+    var high = this.high_;
+    if (numBits &#x3c; 32) {
+      var low = this.low_;
+      return Timestamp.fromBits(
+                 (low &#x3e;&#x3e;&#x3e; numBits) | (high &#x3c;&#x3c; (32 - numBits)),
+                 high &#x3e;&#x3e; numBits);
+    } else {
+      return Timestamp.fromBits(
+                 high &#x3e;&#x3e; (numBits - 32),
+                 high &#x3e;= 0 ? 0 : -1);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.Timestamp.prototype.shiftRightUnsigned" id="apidoc.element.promised-mongo.Timestamp.prototype.shiftRightUnsigned">
+        function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>shiftRightUnsigned
+        <span class="apidocSignatureSpan">(numBits)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">shiftRightUnsigned = function (numBits) {
+  numBits &#x26;= 63;
+  if (numBits == 0) {
+    return this;
+  } else {
+    var high = this.high_;
+    if (numBits &#x3c; 32) {
+      var low = this.low_;
+      return Timestamp.fromBits(
+                 (low &#x3e;&#x3e;&#x3e; numBits) | (high &#x3c;&#x3c; (32 - numBits)),
+                 high &#x3e;&#x3e;&#x3e; numBits);
+    } else if (numBits == 32) {
+      return Timestamp.fromBits(high, 0);
+    } else {
+      return Timestamp.fromBits(high &#x3e;&#x3e;&#x3e; (numBits - 32), 0);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.Timestamp.prototype.subtract" id="apidoc.element.promised-mongo.Timestamp.prototype.subtract">
+        function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>subtract
+        <span class="apidocSignatureSpan">(other)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">subtract = function (other) {
+  return this.add(other.negate());
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.Timestamp.prototype.toInt" id="apidoc.element.promised-mongo.Timestamp.prototype.toInt">
+        function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>toInt
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toInt = function () {
+  return this.low_;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.Timestamp.prototype.toJSON" id="apidoc.element.promised-mongo.Timestamp.prototype.toJSON">
+        function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>toJSON
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toJSON = function () {
+  return this.toString();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.Timestamp.prototype.toNumber" id="apidoc.element.promised-mongo.Timestamp.prototype.toNumber">
+        function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>toNumber
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toNumber = function () {
+  return this.high_ * Timestamp.TWO_PWR_32_DBL_ +
+         this.getLowBitsUnsigned();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.Timestamp.prototype.toString" id="apidoc.element.promised-mongo.Timestamp.prototype.toString">
+        function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>toString
+        <span class="apidocSignatureSpan">(opt_radix)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function (opt_radix) {
+  var radix = opt_radix || 10;
+  if (radix &#x3c; 2 || 36 &#x3c; radix) {
+    throw Error(&#x27;radix out of range: &#x27; + radix);
+  }
+
+  if (this.isZero()) {
+    return &#x27;0&#x27;;
+  }
+
+  if (this.isNegative()) {
+    if (this.equals(Timestamp.MIN_VALUE)) {
+      // We need to change the Timestamp value before it can be negated, so we remove
+      // the bottom-most digit in this base and then recurse to do the rest.
+      var radixTimestamp = Timestamp.fromNumber(radix);
+      var div = this.div(radixTimestamp);
+      var rem = div.multiply(radixTimestamp).subtract(this);
+      return div.toString(radix) + rem.toInt().toString(radix);
+    } else {
+      return &#x27;-&#x27; + this.negate().toString(radix);
+    }
+  }
+
+  // Do several (6) digits each time through the loop, so as to
+  // minimize the calls to the very expensive emulated div.
+  var radixToPower = Timestamp.fromNumber(Math.pow(radix, 6));
+
+  var rem = this;
+  var result = &#x27;&#x27;;
+  while (true) {
+    var remDiv = rem.div(radixToPower);
+    var intval = rem.subtract(remDiv.multiply(radixToPower)).toInt();
+    var digits = intval.toString(radix);
+
+    rem = remDiv;
+    if (rem.isZero()) {
+      return digits + result;
+    } else {
+      while (digits.length &#x3c; 6) {
+        digits = &#x27;0&#x27; + digits;
+      }
+      result = &#x27;&#x27; + digits + result;
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	// docs is now a sorted array
+});
+
+// find a document using a native ObjectId
+db.mycollection.findOne({
+	_id: pmongo.ObjectId(&#x27;523209c4561c640000000001&#x27;)
+}).then(function(doc) {
+	// doc._id.<span class="apidocCodeKeywordSpan">toString</span>() === &#x27;523209c4561c640000000001&#x27;
+});
+
+// find all named &#x27;mathias&#x27; and increment their level
+db.mycollection.update({name:&#x27;mathias&#x27;}, {$inc:{level:1}}, {multi:true})
+	.then(function(lastErrorObject) {
+		// the update is complete
+	});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.Timestamp.prototype.xor" id="apidoc.element.promised-mongo.Timestamp.prototype.xor">
+        function <span class="apidocSignatureSpan">promised-mongo.Timestamp.prototype.</span>xor
+        <span class="apidocSignatureSpan">(other)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">xor = function (other) {
+  return Timestamp.fromBits(this.low_ ^ other.low_, this.high_ ^ other.high_);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.promised-mongo.index" id="apidoc.module.promised-mongo.index">module promised-mongo.index</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.index.index" id="apidoc.element.promised-mongo.index.index">
+        function <span class="apidocSignatureSpan">promised-mongo.</span>index
+        <span class="apidocSignatureSpan">(connectionString, options, collections)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createDatabase(connectionString, options, collections) {
+  var db = new Database(connectionString, options, collections);
+
+  db.ObjectId = mongodb.BSON.ObjectId;
+  db.DBRef = mongodb.BSON.DBRef;
+  db.Timestamp = mongodb.BSON.Timestamp;
+  db.MinKey = mongodb.BSON.MinKey;
+  db.MaxKey = mongodb.BSON.MaxKey;
+  db.NumberLong = mongodb.BSON.Long;
+
+  var ret;
+
+  if (ES2015Proxy) {
+    ret = new ES2015Proxy(db, {
+      get: function (target, property) {
+        if (target[property]) {
+          return target[property];
+        } else {
+          return target[property] = target.collection(property);
+        }
+      }
+    });
+  } else {
+    ret = db;
+  }
+
+  return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.index.DBRef" id="apidoc.element.promised-mongo.index.DBRef">
+        function <span class="apidocSignatureSpan">promised-mongo.index.</span>DBRef
+        <span class="apidocSignatureSpan">(namespace, oid, db)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function DBRef(namespace, oid, db) {
+  if(!(this instanceof DBRef)) return new DBRef(namespace, oid, db);
+
+  this._bsontype = &#x27;DBRef&#x27;;
+  this.namespace = namespace;
+  this.oid = oid;
+  this.db = db;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.index.MaxKey" id="apidoc.element.promised-mongo.index.MaxKey">
+        function <span class="apidocSignatureSpan">promised-mongo.index.</span>MaxKey
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function MaxKey() {
+  if(!(this instanceof MaxKey)) return new MaxKey();
+
+  this._bsontype = &#x27;MaxKey&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.index.MinKey" id="apidoc.element.promised-mongo.index.MinKey">
+        function <span class="apidocSignatureSpan">promised-mongo.index.</span>MinKey
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function MinKey() {
+  if(!(this instanceof MinKey)) return new MinKey();
+
+  this._bsontype = &#x27;MinKey&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.index.NumberLong" id="apidoc.element.promised-mongo.index.NumberLong">
+        function <span class="apidocSignatureSpan">promised-mongo.index.</span>NumberLong
+        <span class="apidocSignatureSpan">(low, high)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Long(low, high) {
+  if(!(this instanceof Long)) return new Long(low, high);
+
+  this._bsontype = &#x27;Long&#x27;;
+<span class="apidocCodeCommentSpan">  /**
+   * @type {number}
+   * @ignore
+   */
+</span>  this.low_ = low | 0;  // force into 32 signed bits.
+
+  /**
+   * @type {number}
+   * @ignore
+   */
+  this.high_ = high | 0;  // force into 32 signed bits.
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.index.ObjectId" id="apidoc.element.promised-mongo.index.ObjectId">
+        function <span class="apidocSignatureSpan">promised-mongo.index.</span>ObjectId
+        <span class="apidocSignatureSpan">(id)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ObjectID(id) {
+  if(!(this instanceof ObjectID)) return new ObjectID(id);
+  // Duck-typing to support ObjectId from different npm packages
+  if((id instanceof ObjectID) || (id &#x26;&#x26; id.toHexString)) return id;
+
+  this._bsontype = &#x27;ObjectID&#x27;;
+  var __id = null;
+  var valid = ObjectID.isValid(id);
+
+  // Throw an error if it&#x27;s not a valid setup
+  if(!valid &#x26;&#x26; id != null){
+    throw new Error(&#x22;Argument passed in must be a single String of 12 bytes or a string of 24 hex characters&#x22;);
+  } else if(valid &#x26;&#x26; typeof id == &#x27;string&#x27; &#x26;&#x26; id.length == 24) {
+    return ObjectID.createFromHexString(id);
+  } else if(id == null || typeof id == &#x27;number&#x27;) {
+    // convert to 12 byte binary string
+    this.id = this.generate(id);
+  } else if(id != null &#x26;&#x26; id.length === 12) {
+    // assume 12 byte string
+    this.id = id;
+  }
+
+  if(ObjectID.cacheHexString) this.__id = this.toHexString();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// find everything, but sort by name
+db.mycollection.find().sort({name:1}).toArray().then(function(docs) {
+	// docs is now a sorted array
+});
+
+// find a document using a native ObjectId
+db.mycollection.findOne({
+	_id: pmongo.<span class="apidocCodeKeywordSpan">ObjectId</span>(&#x27;523209c4561c640000000001&#x27;)
+}).then(function(doc) {
+	// doc._id.toString() === &#x27;523209c4561c640000000001&#x27;
+});
+
+// find all named &#x27;mathias&#x27; and increment their level
+db.mycollection.update({name:&#x27;mathias&#x27;}, {$inc:{level:1}}, {multi:true})
+	.then(function(lastErrorObject) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.index.Timestamp" id="apidoc.element.promised-mongo.index.Timestamp">
+        function <span class="apidocSignatureSpan">promised-mongo.index.</span>Timestamp
+        <span class="apidocSignatureSpan">(low, high)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Timestamp(low, high) {
+  if(!(this instanceof Timestamp)) return new Timestamp(low, high);
+  this._bsontype = &#x27;Timestamp&#x27;;
+<span class="apidocCodeCommentSpan">  /**
+   * @type {number}
+   * @ignore
+   */
+</span>  this.low_ = low | 0;  // force into 32 signed bits.
+
+  /**
+   * @type {number}
+   * @ignore
+   */
+  this.high_ = high | 0;  // force into 32 signed bits.
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promised-mongo.index.compatible" id="apidoc.element.promised-mongo.index.compatible">
+        function <span class="apidocSignatureSpan">promised-mongo.index.</span>compatible
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">compatible = function () {
+  coreJs.Promise.prototype.done = function (resolve, reject) {
+    this.then(
+      function (result) {
+        try {
+          if (resolve) {
+            resolve(result);
+          }
+        } catch (err) {
+          process.nextTick(function () { throw err; });
+        }
+      },
+      function (err) {
+        if (reject) {
+          reject(err);
+        } else {
+          process.nextTick(function () { throw err; });
+        }
+      });
+  };
+
+  coreJs.Promise.prototype.fail = coreJs.Promise.prototype.catch;
+
+  coreJs.Promise.prototype.fin = coreJs.Promise.prototype.finally = function (callback) {
+      return this.then(callback, function (err) { callback(); throw err; });
+  };
+
+  var findAndModify = Collection.prototype.findAndModify;
+  Collection.prototype.findAndModifyEx = findAndModify;
+
+  Collection.prototype.findAndModify = function () {
+    return findAndModify.apply(this, Array.prototype.slice.call(arguments))
+      .then(function (result) {
+        return result.result;
+      });
+  };
+
+  Database.prototype.db = Database.prototype.getSiblingDb;
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+## Compatability with previous versions
+
+I no longer use [Q](https://github.com/kriskowal/q) for promises.  This means that you can&#x27;t  use
+`.done()` at the end of promise chains.  To turn on compatability with previous versions, you can
+call the `compatible()` function:
+
+```js
+var pmongo = require(&#x27;promised-mongo&#x27;).<span class="apidocCodeKeywordSpan">compatible</span>();
+```
+
+Other than dropping support for callbacks, I have tried to make sure that the new library is
+compatible with the old tests (see the legacy_tests folder).
+
+
+## How I write JavaScript
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
